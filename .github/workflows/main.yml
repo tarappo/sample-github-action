@@ -1,4 +1,10 @@
-on: [push]
+name: sample-github-action
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
 
 jobs:
   hello_world_job:
@@ -11,8 +17,6 @@ jobs:
         with:
           who-to-greet: 'Mona the Octocat'
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
-        shell: bash
-      - run: echo "GITHUB_HEAD_REF：${GITHUB_HEAD_REF}"
         shell: bash
       - run: echo "GITHUB_REF_NAME：${GITHUB_REF_NAME}"
         shell: bash
