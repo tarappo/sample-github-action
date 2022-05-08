@@ -15,7 +15,7 @@ jobs:
       - id: foo
         uses: tarappo/sample-composite-action@v1
         with:
-          who-to-greet: ${{ secrets.SAMPLE_SECRETS_ENV }}"
+          who-to-greet: ${{ secrets.SAMPLE_SECRETS_ENV }}
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
       - run: echo "GITHUB_REF_NAME：${GITHUB_HEAD_REF}"
