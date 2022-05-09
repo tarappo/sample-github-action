@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: foo
-        uses: tarappo/sample-composite-action@v3
+        uses: tarappo/sample-composite-action@v5
         with:
           who-to-greet: ${{ secrets.SAMPLE_SECRETS_ENV }}
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
@@ -22,4 +22,9 @@ jobs:
         shell: bash
       - run: echo "Secrets：${{ secrets.SAMPLE_SECRETS_ENV }}"
         shell: bash
-
+      - run: echo "NEW_ENV：${{ NEW_ENV }}"
+        shell: bash
+      - run: echo "NEW_ENV2：${{ NEW_ENV2 }}"
+        shell: bash
+      - run: echo "sample-output：${{ steps.foo.outputs.sample-output }}"
+        shell: bash
