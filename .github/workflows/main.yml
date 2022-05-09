@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: foo
-        uses: tarappo/sample-composite-action@v5
+        uses: tarappo/sample-composite-action@v6
         with:
           who-to-greet: ${{ secrets.SAMPLE_SECRETS_ENV }}
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
