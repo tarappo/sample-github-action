@@ -22,9 +22,5 @@ jobs:
         shell: bash
       - run: echo "Secrets：${{ secrets.SAMPLE_SECRETS_ENV }}"
         shell: bash
-      - run: echo "NEW_ENV：${{ NEW_ENV }}"
-        shell: bash
-      - run: echo "NEW_ENV2：${{ NEW_ENV2 }}"
-        shell: bash
       - run: echo "sample-output：${{ steps.foo.outputs.sample-output }}"
         shell: bash
